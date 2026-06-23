@@ -1,0 +1,57 @@
+[package]
+name = "douya-code"
+version = "0.1.0"
+edition = "2021"
+description = "豆芽Code — 基于 Rust 的本地 AI 编程 CLI，连接豆芽桌面版的 OpenAI 兼容 API"
+license = "MIT"
+repository = "https://github.com/zifeiyu2025/Douya-Code"
+authors = ["zifeiyu2025"]
+
+[dependencies]
+# 异步运行时
+tokio = { version = "1.45", features = ["full"] }
+
+# HTTP 客户端
+reqwest = { version = "0.12", features = ["json", "stream"] }
+reqwest-eventsource = "0.6"
+
+# 序列化
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+# CLI 参数解析
+clap = { version = "4.5", features = ["derive"] }
+
+# TUI 界面
+ratatui = "0.30"
+crossterm = "0.28"
+reedline = "0.39"
+
+# 语法高亮
+syntect = "5.2"
+
+# 工具库
+glob = "0.3"
+regex = "1.11"
+walkdir = "2.5"
+ignore = "0.4"
+
+# 日志
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+
+# 异步工具
+async-trait = "0.1"
+futures = "0.3"
+tokio-util = "0.7"
+
+# 错误处理
+anyhow = "1.0"
+thiserror = "2.0"
+
+# 时间日期
+chrono = "0.4"
+
+[dev-dependencies]
+tokio-test = "0.4"
+mockito = "1.5"
